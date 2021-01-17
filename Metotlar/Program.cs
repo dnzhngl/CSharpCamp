@@ -30,7 +30,7 @@ namespace Metotlar
                 Console.WriteLine($"{product.Name} : {product.Price}$ \nDetails : {product.Description} \n");
             }
 
-            BasketManager basketManager = new BasketManager();
+            CartManager basketManager = new CartManager();
             basketManager.Add(p1);
             basketManager.Add(p2);
 

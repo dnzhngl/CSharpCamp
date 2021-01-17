@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Metotlar
 {
-    class BasketManager
+    class CartManager
     {   
         //naming convention
         public void Add(Product product)
