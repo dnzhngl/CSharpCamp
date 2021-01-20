@@ -8,21 +8,21 @@ namespace ClassMetotDemo
         {
             CustomerManager customerManager = new CustomerManager();
 
-            Customer customer1 = new Customer()
+            Customer customer1 = new Customer
             {
                 Id = 1,
                 Firstname = "Ayşe",
                 Lastname = "Sevimli",
                 DateOfJoined = DateTime.Now
             };
-            Customer customer2 = new Customer()
+            Customer customer2 = new Customer
             {
                 Id = 2,
                 Firstname = "Veli",
                 Lastname = "Gülümser",
                 DateOfJoined = DateTime.Now
             };
-            Customer customer3 = new Customer()
+            Customer customer3 = new Customer
             {
                 Id = 3,
                 Firstname = "Can",

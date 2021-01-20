@@ -6,17 +6,17 @@ namespace ClassMetotDemo
 {
     class CustomerManager
     {
-        List<Customer> Customers = new List<Customer>();
+        List<Customer> customers = new List<Customer>();
 
         public void Add(Customer customer)
         {
-            Customers.Add(customer);
+            customers.Add(customer);
             Console.WriteLine("Customer added.");
         }
         public List<string> GetAll()
         {
             var customerList = new List<string>();
-            foreach (var customer in Customers)
+            foreach (var customer in customers)
             {
                 customerList.Add($"{customer.Firstname} {customer.Lastname} - Katıldığı Gün: {customer.DateOfJoined}");
             }
@@ -24,13 +24,13 @@ namespace ClassMetotDemo
         }
         public void Delete(int id)
         {
-            var customer = Customers.Find(c => c.Id == id);
-            Customers.Remove(customer);
+            var customer = customers.Find(c => c.Id == id);
+            customers.Remove(customer);
             Console.WriteLine("Customer deleted.");
         }
         public string Update(Customer updatedcustomer)
         {
-            var customer = Customers.Find(c => c.Id == updatedcustomer.Id);
+            var customer = customers.Find(c => c.Id == updatedcustomer.Id);
             customer = updatedcustomer;
             Console.WriteLine("Customer updated");
             return ($"{customer.Firstname} {customer.Lastname} - Katıldığı Gün: {customer.DateOfJoined}");
