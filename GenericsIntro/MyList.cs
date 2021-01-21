@@ -4,7 +4,7 @@ using System.Text;
 
 namespace GenericsIntro
 {
-    class MyList <T>
+    class MyList<T>
     {
         T[] items;
         // constructor : Bu classını newlediğimiz zaman constructor otomatik olarak çalışır.
@@ -22,5 +22,17 @@ namespace GenericsIntro
             }
             items[items.Length - 1] = item;
         }
+
+        public int Length
+        {
+            get { return items.Length; }
+        }
+
+        public T[] Items
+        {
+            get { return items; }
+        }
+
+
     }
 }
