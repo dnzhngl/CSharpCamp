@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ClassMetotDemo
+namespace ClassMethodDemo
 {
     class Program
     {

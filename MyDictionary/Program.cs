@@ -21,6 +21,19 @@ namespace MyDictionary
                 Console.WriteLine(keys[i] + " : " + values[i]);
             }
 
+
+            AnotherDictionary<int, string> aD = new AnotherDictionary<int, string>();
+            aD.Add(1, "A");
+            aD.Add(2, "B");
+            aD.Add(3, "C");
+            Console.WriteLine(aD.Count);
+
+            for (int i = 0; i < aD.Count; i++)
+            {
+                Console.WriteLine(aD.Keys[i] + "." + aD.Values[i]);
+            }
+            Console.WriteLine(aD.GetKey("A"));
+            Console.WriteLine(aD.GetValue(2));
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Donguler
+namespace Loops
 {
     class Program
     {
