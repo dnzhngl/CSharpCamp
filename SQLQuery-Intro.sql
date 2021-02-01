@@ -69,3 +69,15 @@ select * from Customers c left join Orders o on c.CustomerID = o.CustomerID
 -- Üye olmuş ama ürün almamış.
 select * from Customers c left join Orders o on c.CustomerID = o.CustomerID
 where o.OrderID is null
+
+-- Her bir üründen toplamda ne kadar para kazandığımızı bulunuz.
+select p.ProductName, Sum((od.UnitPrice * od.Quantity) * (1 - od.Discount)) from Products p 
+inner join [Order Details] od on p.ProductID = od.ProductID
+group by ProductName
+order by ProductName
+
+
+select p.ProductName, Sum(((od.UnitPrice - p.UnitPrice) * od.Quantity) * (1 - od.Discount)) from Products p 
+inner join [Order Details] od on p.ProductID = od.ProductID
+group by ProductName
+order by ProductName

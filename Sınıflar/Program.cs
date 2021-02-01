@@ -31,6 +31,7 @@ namespace Classes
             {
                 Console.WriteLine(kurs.KursAdi + " : " + kurs.Eğitmen);
             }
+
         }
     }
 
@@ -40,4 +41,5 @@ namespace Classes
         public string Eğitmen { get; set; }
         public int IzlenmeOrani  { get; set; }
     }
+
 }
